@@ -139,6 +139,32 @@ namespace InventoryMaintenance
                         select item;
             }
 
+            //  Had we used method-based LINQ, it would have looked like this:
+            //  if (filter == "All")
+            //  {
+            //    filteredItems = items
+            //        .OrderBy(item => item.Description);
+            //  }
+            //  else if (filter == "Under $10")
+            //  {
+            //    filteredItems = items
+            //        .Where(item => item.Price < 10)
+            //        .OrderBy(item => item.Description);
+            //  }
+            //  else if (filter == "$10 to $50")
+            //  {
+            //    filteredItems = items
+            //        .Where(item => item.Price >= 10 && item.Price <= 50)
+            //        .OrderBy(item => item.Description);
+            //  }
+            //  else if (filter == "Over $50")
+            //  {
+            //    filteredItems = items
+            //        .Where(item => item.Price > 50)
+            //        .OrderBy(item => item.Description);
+            //  }
+
+
             // change code to loop the filteredItems collection
             foreach (InventoryItem item in filteredItems)
             {
